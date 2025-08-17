@@ -1,54 +1,56 @@
-Quora Scraper
+# Quora Scraper
 
 A Python-based scraper for collecting questions and answers from Quora using a valid user session.
 
-Note: This project is still under development and may contain bugs.
+> **Note:** This project is still under development and may contain bugs.
 
-Features(MVP)
+## Responsible Use
 
-Scrape Quora questions and answers by topic.
+- This scraper is intended **only for analyzing content on certain subjects via Quora**  
+- It is **not meant to violate Quora's Terms of Service** or use the data for commercial purposes  
+- Users should **respect Quora’s policies** and avoid misuse of scraped data
 
-Navigate related questions using a keyword for broader data collection.
+---
 
-Uses your Quora login session for access.
+## Features (MVP)
 
-Prerequisites
+- Scrape Quora questions and answers by topic
+- Navigate related questions using a keyword for broader data collection
+- Uses your Quora login session for access
 
-Python 3.x installed
+---
 
-Required Python libraries: selenium, pandas, etc.
+## Prerequisites
 
-Chrome browser with a Quora account
+- Python 3.x installed
+- Required Python libraries: `selenium`, `pandas`, etc.
+- Chrome browser with a Quora account
 
-Setup
+---
 
-Export Quora Cookies
+## Setup
 
-Install the Get cookies.txt Chrome extension.
+### 1. Export Quora Cookies
 
-Log in to Quora and export cookies as cookies.json.
+- Install the [Get cookies.txt Chrome extension](https://chromewebstore.google.com/detail/cclelndahbckbenkjhflpdbgdldlbecc?utm_source=item-share-cb)
+- Log in to Quora and export cookies as `cookies.json`
+- Save `cookies.json` in the same directory as `scrape.py`
 
-Save cookies.json in the same directory as scrape.py.
+### 2. Configure Scraper
 
-Configure Scraper
-
-Open scrape.py.
-
-Set the start URL (line 87):
+- Open `scrape.py`
+- Set the **start URL** (line 87):
 
 start_url = "https://www.quora.com/Enter-any-topic-of-your-choice"
 
+Set the keyword to that of your choice (line 79) for related questions
+## Running the Scraper
 
-Set the keyword (line 79) for related questions:
+When you run the scraper:
 
-keyword = "YourKeywordHere"
+- **Loads your Quora session from cookies**  
+- **Scrapes questions and answers for the given topic and keyword**  
 
-Running the Scraper
-python scrape.py
+> **Note:** Make sure your cookies are valid. Expired cookies will prevent access.
 
-
-Loads your Quora session from cookies.
-
-Scrapes questions and answers for the given topic and keyword.
-
-Note: Make sure your cookies are valid. Expired cookies will prevent access.
+---
