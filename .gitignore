@@ -1,2 +1,5 @@
-quora_all_answers.csv
-quora_answers_sentiment.csv
+*.csv
+Scrapy.py
+Note.txt
+Readme.md
+Clean.py
